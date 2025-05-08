@@ -3,7 +3,7 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const nodemailer = require('nodemailer');
+//const nodemailer = require('nodemailer');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
@@ -43,13 +43,13 @@ mongoose.connect(process.env.MONGODB_URI, {
 .catch(err => console.error('MongoDB connection error:', err));
 
 // Email transporter
-const transporter = nodemailer.createTransport({
+/*const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS
     }
-});
+}); */
 
 // Routes
 app.use('/api/auth', authRoutes);
@@ -65,4 +65,4 @@ app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
 
-module.exports = { transporter };
+//module.exports = { transporter };
