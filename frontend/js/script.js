@@ -1,8 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // API Base URL
+    const API_BASE_URL = "https://quiz-wiz-kaqu.onrender.com";
+    
     // Common elements
     const alertContainer = document.getElementById('alert-container');
     
-    // Show alert function
+    // ========================
+    // Helper Functions
+    // ========================
+    
+    // Show alert notification
     function showAlert(message, type = 'success') {
         const alert = document.createElement('div');
         alert.className = `alert alert-${type} alert-dismissible fade show alert-notification`;
@@ -12,17 +19,46 @@ document.addEventListener('DOMContentLoaded', function() {
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         `;
         
-        // Add to body if no container found
         const targetContainer = alertContainer || document.body;
         targetContainer.appendChild(alert);
         
-        // Remove after 5 seconds
         setTimeout(() => {
             alert.remove();
         }, 5000);
     }
     
-    // Toggle password visibility
+    // API Call Function (replaces simulateApiCall)
+    async function makeApiCall({ endpoint, method, body }) {
+        const headers = {
+            'Content-Type': 'application/json'
+        };
+        
+        // Add auth token if available
+        const user = JSON.parse(localStorage.getItem('user'));
+        if (user?.token) {
+            headers['Authorization'] = `Bearer ${user.token}`;
+        }
+        
+        try {
+            const response = await fetch(`${API_BASE_URL}${endpoint}`, {
+                method,
+                headers,
+                body: body ? JSON.stringify(body) : undefined
+            });
+            
+            if (!response.ok) {
+                const errorData = await response.json();
+                throw new Error(errorData.message || 'API request failed');
+            }
+            
+            return await response.json();
+        } catch (error) {
+            console.error('API call error:', error);
+            throw error;
+        }
+    }
+    
+    // Password visibility toggle
     function setupPasswordToggle(buttonId, inputId) {
         const toggleButton = document.getElementById(buttonId);
         const passwordInput = document.getElementById(inputId);
@@ -37,14 +73,16 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // Set up all password toggles
+    // Initialize all password toggles
     setupPasswordToggle('togglePassword', 'password');
     setupPasswordToggle('toggleConfirmPassword', 'confirmPassword');
     setupPasswordToggle('toggleCurrentPassword', 'currentPassword');
     setupPasswordToggle('toggleNewPassword', 'newPassword');
     setupPasswordToggle('toggleConfirmNewPassword', 'confirmNewPassword');
     
-    // Sign Up Form
+    // ========================
+    // Sign Up Functionality
+    // ========================
     const signupForm = document.getElementById('signupForm');
     if (signupForm) {
         signupForm.addEventListener('submit', async function(e) {
@@ -55,17 +93,14 @@ document.addEventListener('DOMContentLoaded', function() {
             const password = document.getElementById('password').value;
             const confirmPassword = document.getElementById('confirmPassword').value;
             
-            // Simple validation
             if (password !== confirmPassword) {
                 showAlert('Passwords do not match!', 'danger');
                 return;
             }
             
             try {
-                // In a real app, you would call your backend API here
-                // For demo, we'll simulate an API call
-                const response = await simulateApiCall({
-                    endpoint: '/api/signup',
+                const response = await makeApiCall({
+                    endpoint: '/api/auth/signup',
                     method: 'POST',
                     body: { name, email, password }
                 });
@@ -85,9 +120,8 @@ document.addEventListener('DOMContentLoaded', function() {
                         }
                         
                         try {
-                            // Verify OTP with backend
-                            const verifyResponse = await simulateApiCall({
-                                endpoint: '/api/verify-otp',
+                            const verifyResponse = await makeApiCall({
+                                endpoint: '/api/auth/verify-otp',
                                 method: 'POST',
                                 body: { email, otp }
                             });
@@ -99,22 +133,24 @@ document.addEventListener('DOMContentLoaded', function() {
                                     window.location.href = 'signin.html';
                                 }, 1500);
                             } else {
-                                showAlert('Invalid OTP. Please try again.', 'danger');
+                                showAlert(verifyResponse.message || 'Invalid OTP', 'danger');
                             }
                         } catch (error) {
                             showAlert('Error verifying OTP. Please try again.', 'danger');
                         }
                     });
                 } else {
-                    showAlert(response.message || 'Signup failed. Please try again.', 'danger');
+                    showAlert(response.message || 'Signup failed', 'danger');
                 }
             } catch (error) {
-                showAlert('An error occurred. Please try again.', 'danger');
+                showAlert(error.message || 'An error occurred during signup', 'danger');
             }
         });
     }
     
-    // Sign In Form
+    // ========================
+    // Sign In Functionality
+    // ========================
     const signinForm = document.getElementById('signinForm');
     if (signinForm) {
         signinForm.addEventListener('submit', async function(e) {
@@ -125,17 +161,22 @@ document.addEventListener('DOMContentLoaded', function() {
             const rememberMe = document.getElementById('rememberMe').checked;
             
             try {
-                // In a real app, you would call your backend API here
-                const response = await simulateApiCall({
-                    endpoint: '/api/signin',
+                const response = await makeApiCall({
+                    endpoint: '/api/auth/signin',
                     method: 'POST',
                     body: { email, password, rememberMe }
                 });
                 
                 if (response.success) {
                     showAlert('Login successful!', 'success');
-                    // Store user data in localStorage
-                    localStorage.setItem('user', JSON.stringify(response.user));
+                    // Store user data with token
+                    localStorage.setItem('user', JSON.stringify({
+                        id: response.user.id,
+                        name: response.user.name,
+                        email: response.user.email,
+                        token: response.token
+                    }));
+                    
                     setTimeout(() => {
                         window.location.href = 'dashboard.html';
                     }, 1500);
@@ -143,22 +184,22 @@ document.addEventListener('DOMContentLoaded', function() {
                     showAlert(response.message || 'Invalid email or password', 'danger');
                 }
             } catch (error) {
-                showAlert('An error occurred. Please try again.', 'danger');
+                showAlert(error.message || 'Login failed. Please try again.', 'danger');
             }
         });
     }
     
-    // Forgot Password Link
+    // ========================
+    // Forgot Password
+    // ========================
     const forgotPasswordLink = document.getElementById('forgotPassword');
     if (forgotPasswordLink) {
         forgotPasswordLink.addEventListener('click', function(e) {
             e.preventDefault();
-            const modal = new bootstrap.Modal(document.getElementById('forgotPasswordModal'));
-            modal.show();
+            new bootstrap.Modal(document.getElementById('forgotPasswordModal')).show();
         });
     }
     
-    // Forgot Password Form
     const forgotPasswordForm = document.getElementById('forgotPasswordForm');
     if (forgotPasswordForm) {
         forgotPasswordForm.addEventListener('submit', async function(e) {
@@ -167,91 +208,29 @@ document.addEventListener('DOMContentLoaded', function() {
             const email = document.getElementById('resetEmail').value;
             
             try {
-                // Send reset code to email
-                const response = await simulateApiCall({
-                    endpoint: '/api/forgot-password',
+                const response = await makeApiCall({
+                    endpoint: '/api/auth/forgot-password',
                     method: 'POST',
                     body: { email }
                 });
                 
                 if (response.success) {
-                    showAlert('Password reset code sent to your email', 'success');
-                    // Close modal
-                    const modal = bootstrap.Modal.getInstance(document.getElementById('forgotPasswordModal'));
-                    modal.hide();
+                    showAlert('Password reset instructions sent to your email', 'success');
+                    bootstrap.Modal.getInstance(document.getElementById('forgotPasswordModal')).hide();
                 } else {
-                    showAlert(response.message || 'Failed to send reset code', 'danger');
+                    showAlert(response.message || 'Failed to send reset instructions', 'danger');
                 }
             } catch (error) {
-                showAlert('An error occurred. Please try again.', 'danger');
+                showAlert(error.message || 'Failed to process request', 'danger');
             }
         });
     }
     
-    // Change Password Form
-    const changePasswordForm = document.getElementById('changePasswordForm');
-    if (changePasswordForm) {
-        changePasswordForm.addEventListener('submit', async function(e) {
-            e.preventDefault();
-            
-            const currentPassword = document.getElementById('currentPassword').value;
-            const newPassword = document.getElementById('newPassword').value;
-            const confirmNewPassword = document.getElementById('confirmNewPassword').value;
-            
-            // Validation
-            if (newPassword !== confirmNewPassword) {
-                showAlert('New passwords do not match!', 'danger');
-                return;
-            }
-            
-            try {
-                // Get user from localStorage
-                const user = JSON.parse(localStorage.getItem('user'));
-                if (!user) {
-                    showAlert('Please sign in again', 'danger');
-                    return;
-                }
-                
-                // Call API to change password
-                const response = await simulateApiCall({
-                    endpoint: '/api/change-password',
-                    method: 'POST',
-                    body: { 
-                        userId: user.id, 
-                        currentPassword, 
-                        newPassword 
-                    }
-                });
-                
-                if (response.success) {
-                    showAlert('Password changed successfully!', 'success');
-                    // Close modal
-                    const modal = bootstrap.Modal.getInstance(document.getElementById('changePasswordModal'));
-                    modal.hide();
-                } else {
-                    showAlert(response.message || 'Failed to change password', 'danger');
-                }
-            } catch (error) {
-                showAlert('An error occurred. Please try again.', 'danger');
-            }
-        });
-    }
-    
-    // Logout
-    const logoutButton = document.getElementById('logout');
-    if (logoutButton) {
-        logoutButton.addEventListener('click', function(e) {
-            e.preventDefault();
-            localStorage.removeItem('user');
-            showAlert('Logged out successfully', 'success');
-            setTimeout(() => {
-                window.location.href = 'signin.html';
-            }, 1500);
-        });
-    }
-    
-    // Dashboard - Load user data
+    // ========================
+    // Dashboard Functionality
+    // ========================
     if (window.location.pathname.includes('dashboard.html')) {
+        // Load user data
         const user = JSON.parse(localStorage.getItem('user'));
         if (!user) {
             window.location.href = 'signin.html';
@@ -263,90 +242,59 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('profileName').textContent = user.name;
         document.getElementById('profileEmail').textContent = user.email;
         
-        // Generate initials for profile icon if no image
+        // Generate initials for profile icon
         if (!user.image) {
             const initials = user.name.split(' ').map(n => n[0]).join('').toUpperCase();
             document.getElementById('profileIcon').className = 'fas fa-user-circle fa-5x text-primary';
             document.getElementById('userIcon').innerHTML = `<i class="fas fa-user-circle"></i>`;
         }
-    }
-    
-    // Simulate API call (replace with actual fetch calls to your backend)
-    async function simulateApiCall({ endpoint, method, body }) {
-        console.log(`API Call: ${method} ${endpoint}`, body);
         
-        // Simulate network delay
-        await new Promise(resolve => setTimeout(resolve, 800));
-        
-        // Mock responses
-        if (endpoint === '/api/signup') {
-            return {
-                success: true,
-                message: 'OTP sent to your email'
-            };
-        }
-        
-        if (endpoint === '/api/verify-otp') {
-            if (body.otp === '123456') { // Mock valid OTP
-                return {
-                    success: true,
-                    user: {
-                        id: 'user123',
-                        name: body.name || 'Test User',
-                        email: body.email
+        // Change Password
+        const changePasswordForm = document.getElementById('changePasswordForm');
+        if (changePasswordForm) {
+            changePasswordForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                const currentPassword = document.getElementById('currentPassword').value;
+                const newPassword = document.getElementById('newPassword').value;
+                const confirmNewPassword = document.getElementById('confirmNewPassword').value;
+                
+                if (newPassword !== confirmNewPassword) {
+                    showAlert('New passwords do not match!', 'danger');
+                    return;
+                }
+                
+                try {
+                    const response = await makeApiCall({
+                        endpoint: '/api/auth/change-password',
+                        method: 'POST',
+                        body: { 
+                            userId: user.id, 
+                            currentPassword, 
+                            newPassword 
+                        }
+                    });
+                    
+                    if (response.success) {
+                        showAlert('Password changed successfully!', 'success');
+                        bootstrap.Modal.getInstance(document.getElementById('changePasswordModal')).hide();
+                    } else {
+                        showAlert(response.message || 'Password change failed', 'danger');
                     }
-                };
-            } else {
-                return {
-                    success: false,
-                    message: 'Invalid OTP'
-                };
-            }
+                } catch (error) {
+                    showAlert(error.message || 'Failed to change password', 'danger');
+                }
+            });
         }
         
-        if (endpoint === '/api/signin') {
-            if (body.password === 'password123') { // Mock valid password
-                return {
-                    success: true,
-                    user: {
-                        id: 'user123',
-                        name: 'Test User',
-                        email: body.email
-                    }
-                };
-            } else {
-                return {
-                    success: false,
-                    message: 'Invalid credentials'
-                };
-            }
-        }
-        
-        if (endpoint === '/api/forgot-password') {
-            return {
-                success: true,
-                message: 'Reset code sent'
-            };
-        }
-        
-        if (endpoint === '/api/change-password') {
-            if (body.currentPassword === 'password123') { // Mock valid current password
-                return {
-                    success: true,
-                    message: 'Password changed'
-                };
-            } else {
-                return {
-                    success: false,
-                    message: 'Current password is incorrect'
-                };
-            }
-        }
-        
-        // Default response
-        return {
-            success: false,
-            message: 'Endpoint not implemented'
-        };
+        // Logout
+        document.getElementById('logout').addEventListener('click', function(e) {
+            e.preventDefault();
+            localStorage.removeItem('user');
+            showAlert('Logged out successfully', 'success');
+            setTimeout(() => {
+                window.location.href = 'signin.html';
+            }, 1500);
+        });
     }
 });
