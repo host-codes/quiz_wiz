@@ -11,14 +11,23 @@ const authRoutes = require('./routes/authRoutes');
 
 const app = express();
 
-const corsOptions = {
+/*const corsOptions = {
     origin: [
         "https://your-github-pages-url.com", // Your frontend URL
         "http://localhost:3000"              // For local testing
     ],
     credentials: true
+};*/
+const corsOptions = {
+    origin: [
+        "https://host-codes.github.io",          // Root domain
+        "https://host-codes.github.io/quiz_wiz", // With repo path
+        "http://localhost:3000"                  // For local development
+    ],
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE"],   // Allowed methods
+    allowedHeaders: ["Content-Type", "Authorization"]
 };
-
 app.use(cors(corsOptions));
 
 // Middleware
