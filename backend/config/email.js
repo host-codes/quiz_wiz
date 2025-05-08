@@ -1,3 +1,34 @@
+const nodemailer = require('nodemailer');
+
+const transporter = nodemailer.createTransport({
+  host: 'smtp.gmail.com',
+  port: 465,
+  secure: true, // true for 465, false for other ports
+  auth: {
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS
+  },
+  tls: {
+    // Important for Render's network
+    rejectUnauthorized: false
+  }
+});
+
+// Verify connection on startup
+transporter.verify((error) => {
+  if (error) {
+    console.error('Email connection error:', error);
+  } else {
+    console.log('Email server ready');
+  }
+});
+
+module.exports = transporter;
+
+
+
+
+
 /*const nodemailer = require('nodemailer');
 
 const transporter = nodemailer.createTransport({
@@ -12,7 +43,7 @@ module.exports = transporter; // This is correct
 */
 
 
-const nodemailer = require('nodemailer');
+/*const nodemailer = require('nodemailer');
 
 const transporter = nodemailer.createTransport({
   service: 'gmail',
@@ -34,4 +65,4 @@ transporter.verify(function(error, success) {
   }
 });
 
-module.exports = transporter;
+module.exports = transporter;*/
