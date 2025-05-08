@@ -1,0 +1,57 @@
+/* Custom styles */
+body {
+    background-color: #f8f9fa;
+}
+
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    border-radius: 10px 10px 0 0 !important;
+}
+
+/* Alert notification */
+.alert-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    min-width: 300px;
+    animation: slideIn 0.5s forwards, fadeOut 0.5s 3s forwards;
+}
+
+@keyframes slideIn {
+    from { right: -100%; opacity: 0; }
+    to { right: 20px; opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+/* Profile icon */
+#profileIcon {
+    color: #0d6efd;
+}
+
+/* Password toggle button */
+.input-group-text {
+    cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .alert-notification {
+        width: 90%;
+        left: 5%;
+        right: auto;
+    }
+    
+    @keyframes slideIn {
+        from { top: -100px; opacity: 0; }
+        to { top: 20px; opacity: 1; }
+    }
+}
