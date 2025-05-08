@@ -11,6 +11,16 @@ const authRoutes = require('./routes/authRoutes');
 
 const app = express();
 
+const corsOptions = {
+    origin: [
+        "https://your-github-pages-url.com", // Your frontend URL
+        "http://localhost:3000"              // For local testing
+    ],
+    credentials: true
+};
+
+app.use(cors(corsOptions));
+
 // Middleware
 app.use(cors());
 app.use(bodyParser.json());
