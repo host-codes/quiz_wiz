@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // ========================
     // Sign Up Functionality
     // ========================
-    const signupForm = document.getElementById('signupForm');
+   /* const signupForm = document.getElementById('signupForm');
     if (signupForm) {
         signupForm.addEventListener('submit', async function(e) {
             e.preventDefault();
@@ -146,7 +146,90 @@ document.addEventListener('DOMContentLoaded', function() {
                 showAlert(error.message || 'An error occurred during signup', 'danger');
             }
         });
-    }
+    }*/
+	
+	const signupForm = document.getElementById('signupForm');
+if (signupForm) {
+    // Store these elements once instead of querying multiple times
+    const otpModal = new bootstrap.Modal(document.getElementById('otpModal'));
+    const verifyOtpBtn = document.getElementById('verifyOtp');
+    const otpInput = document.getElementById('otp');
+    const emailInput = document.getElementById('email');
+
+    // Move OTP verification handler outside to avoid duplicate event listeners
+    verifyOtpBtn.addEventListener('click', async function() {
+        const otp = otpInput.value;
+        const email = emailInput.value; // Get email directly from form
+        
+        if (!otp || otp.length !== 6) {
+            showAlert('Please enter a valid 6-digit OTP', 'danger');
+            return;
+        }
+        
+        try {
+            const verifyResponse = await makeApiCall({
+                endpoint: '/api/auth/verify-otp',
+                method: 'POST',
+                body: { email, otp }
+            });
+            
+            if (verifyResponse.success) {
+                showAlert('Account created successfully!', 'success');
+                otpModal.hide();
+                setTimeout(() => {
+                    window.location.href = 'signin.html';
+                }, 1500);
+            } else {
+                showAlert(verifyResponse.message || 'Invalid OTP', 'danger');
+            }
+        } catch (error) {
+            showAlert('Error verifying OTP. Please try again.', 'danger');
+            console.error('OTP verification error:', error);
+        }
+    });
+
+    signupForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const name = document.getElementById('name').value;
+        const email = emailInput.value;
+        const password = document.getElementById('password').value;
+        const confirmPassword = document.getElementById('confirmPassword').value;
+        
+        // Clear previous alerts
+        const alertContainer = document.getElementById('alert-container');
+        if (alertContainer) alertContainer.innerHTML = '';
+        
+        if (password !== confirmPassword) {
+            showAlert('Passwords do not match!', 'danger');
+            return;
+        }
+        
+        try {
+            showAlert('Creating your account...', 'info');
+            
+            const response = await makeApiCall({
+                endpoint: '/api/auth/signup',
+                method: 'POST',
+                body: { name, email, password }
+            });
+            
+            if (response.success) {
+                showAlert('OTP sent to your email!', 'success');
+                // Reset OTP input
+                otpInput.value = '';
+                // Show modal
+                otpModal.show();
+            } else {
+                showAlert(response.message || 'Signup failed', 'danger');
+            }
+        } catch (error) {
+            console.error('Signup error:', error);
+            showAlert(error.message || 'An error occurred during signup', 'danger');
+        }
+    });
+}
+	
     
     // ========================
     // Sign In Functionality
