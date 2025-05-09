@@ -59,7 +59,7 @@ router.post('/signup', async (req, res) => {
 });
 
 // Verify OTP
-router.post('/verify-otp', async (req, res) => {
+/*router.post('/verify-otp', async (req, res) => {
     try {
         const { email, otp } = req.body;
         
@@ -100,6 +100,78 @@ router.post('/verify-otp', async (req, res) => {
     } catch (err) {
         console.error(err);
         res.status(500).json({ success: false, message: 'Server error' });
+    }
+});*/
+
+// Verify OTP
+router.post('/verify-otp', async (req, res) => {
+    try {
+        const { email, otp } = req.body;
+        
+        // 1. Validate input
+        if (!email || !otp) {
+            return res.status(400).json({ 
+                success: false, 
+                message: 'Email and OTP are required' 
+            });
+        }
+
+        // 2. Find user
+        const user = await User.findOne({ email });
+        if (!user) {
+            return res.status(400).json({ 
+                success: false, 
+                message: 'User not found. Please sign up first.' 
+            });
+        }
+        
+        // 3. Check if OTP matches and isn't expired
+        const now = new Date();
+        if (user.otp !== otp) {
+            return res.status(400).json({ 
+                success: false, 
+                message: 'Incorrect OTP. Please check the code and try again.' 
+            });
+        }
+        
+        if (user.otpExpires < now) {
+            return res.status(400).json({ 
+                success: false, 
+                message: 'OTP has expired. Please request a new one.' 
+            });
+        }
+        
+        // 4. Update user
+        user.emailVerified = true;
+        user.otp = undefined;       // Clear OTP
+        user.otpExpires = undefined; // Clear expiration
+        await user.save();
+        
+        // 5. Create login token
+        const token = jwt.sign(
+            { userId: user._id },
+            process.env.JWT_SECRET,
+            { expiresIn: '1h' } // Token valid for 1 hour
+        );
+        
+        // 6. Send success response
+        res.json({ 
+            success: true, 
+            message: 'Email verified successfully!',
+            token, // For automatic login
+            user: { // Basic user info
+                id: user._id,
+                name: user.name,
+                email: user.email
+            }
+        });
+        
+    } catch (err) {
+        console.error('OTP Verification Error:', err);
+        res.status(500).json({ 
+            success: false, 
+            message: 'Something went wrong. Please try again later.' 
+        });
     }
 });
 
