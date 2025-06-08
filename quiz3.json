@@ -1,0 +1,288 @@
+{
+  "title": "SBI IBPS pre Bank inequality set - 3",
+  "description": "SBI IBPS pre Bank inequality set - 3",
+  "duration": 720,
+  "multilingual": true,
+  "questions": [
+    {
+      "english": {
+        "text": "<b>Directions:</b> In the following question assuming the given statements to be true, find which of the\nconclusion among given conclusions is/are definitely true and then give your answers accordingly.\n\na). Only conclusion I follows\nb). Only conclusion II follows\nc). Both conclusion are follows\nd). None of the conclusion are follows\ne). Either conclusion I or II follows",
+        "question": "<b>Statements:</b> \nM < S < O = P = J > G > H ≥ K\n<b>Conclusions:</b>\nI. P > M\nII. K < O\n",
+        "options": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ],
+        "correctAnswer": 2,
+        "explanation": ""
+      },
+      "hindi": {
+        "text": "<b>Directions:</b> In the following question assuming the given statements to be true, find which of the\nconclusion among given conclusions is/are definitely true and then give your answers accordingly.\n\na). Only conclusion I follows\nb). Only conclusion II follows\nc). Both conclusion are follows\nd). None of the conclusion are follows\ne). Either conclusion I or II follows",
+        "question": "<b>Statements:</b> \nM < S < O = P = J > G > H ≥ K\n<b>Conclusions:</b>\nI. P > M\nII. K < O\n",
+        "options": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ],
+        "correctAnswer": 2,
+        "explanation": ""
+      }
+    },
+    {
+      "english": {
+        "text": "<b>Directions:</b> In the following question assuming the given statements to be true, find which of the\nconclusion among given conclusions is/are definitely true and then give your answers accordingly.\n\na). Only conclusion I follows\nb). Only conclusion II follows\nc). Both conclusion are follows\nd). None of the conclusion are follows\ne). Either conclusion I or II follows",
+        "question": "<b>Statements : </b>\nT > Z = P < X, R ≥ Y, D ≥ N = T\n<b>Conclusions :</b>\nI. Z < R\nII. D > P\n",
+        "options": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ],
+        "correctAnswer": 1,
+        "explanation": ""
+      },
+      "hindi": {
+        "text": "<b>Directions:</b> In the following question assuming the given statements to be true, find which of the\nconclusion among given conclusions is/are definitely true and then give your answers accordingly.\n\na). Only conclusion I follows\nb). Only conclusion II follows\nc). Both conclusion are follows\nd). None of the conclusion are follows\ne). Either conclusion I or II follows",
+        "question": "<b>Statements : </b>\nT > Z = P < X, R ≥ Y, D ≥ N = T\n<b>Conclusions :</b>\nI. Z < R\nII. D > P\n",
+        "options": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ],
+        "correctAnswer": 1,
+        "explanation": ""
+      }
+    },
+    {
+      "english": {
+        "text": "<b>Directions:</b> In the following question assuming the given statements to be true, find which of the\nconclusion among given conclusions is/are definitely true and then give your answers accordingly.\n\na). Only conclusion I follows\nb). Only conclusion II follows\nc). Both conclusion are follows\nd). None of the conclusion are follows\ne). Either conclusion I or II follows",
+        "question": "<b>Statements : </b>\nT > N < V = L ≤ W < K, V = H > I > F\n<b>Conclusions :</b>\nI. V > F\nII. T > H\n",
+        "options": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ],
+        "correctAnswer": 0,
+        "explanation": ""
+      },
+      "hindi": {
+        "text": "<b>Directions:</b> In the following question assuming the given statements to be true, find which of the\nconclusion among given conclusions is/are definitely true and then give your answers accordingly.\n\na). Only conclusion I follows\nb). Only conclusion II follows\nc). Both conclusion are follows\nd). None of the conclusion are follows\ne). Either conclusion I or II follows",
+        "question": "<b>Statements : </b>\nT > N < V = L ≤ W < K, V = H > I > F\n<b>Conclusions :</b>\nI. V > F\nII. T > H\n",
+        "options": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ],
+        "correctAnswer": 0,
+        "explanation": ""
+      }
+    },
+    {
+      "english": {
+        "text": "<b>Directions:</b> In the following question assuming the given statements to be true, find which of the\nconclusion among given conclusions is/are definitely true and then give your answers accordingly.\n\na). Only conclusion I follows\nb). Only conclusion II follows\nc). Both conclusion are follows\nd). None of the conclusion are follows\ne). Either conclusion I or II follows",
+        "question": "<b>Statements: </b>\nM < A ≤ H ≤ B; U = K; K ≤ B\n<b>Conclusions:</b>\nI. B ≥ U\nII. M < K",
+        "options": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ],
+        "correctAnswer": 0,
+        "explanation": ""
+      },
+      "hindi": {
+        "text": "<b>Directions:</b> In the following question assuming the given statements to be true, find which of the\nconclusion among given conclusions is/are definitely true and then give your answers accordingly.\n\na). Only conclusion I follows\nb). Only conclusion II follows\nc). Both conclusion are follows\nd). None of the conclusion are follows\ne). Either conclusion I or II follows",
+        "question": "<b>Statements: </b>\nM < A ≤ H ≤ B; U = K; K ≤ B\n<b>Conclusions:</b>\nI. B ≥ U\nII. M < K",
+        "options": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ],
+        "correctAnswer": 0,
+        "explanation": ""
+      }
+    },
+    {
+      "english": {
+        "text": "<b>Directions:</b> In the following question assuming the given statements to be true, find which of the\nconclusion among given conclusions is/are definitely true and then give your answers accordingly.\n\na). Only conclusion I follows\nb). Only conclusion II follows\nc). Both I and II are follow\nd). Either conclusion I or II follows\ne). None of these\n\n",
+        "question": "<b>Statement: </b>\nH ≤ G ≤ N ≥ L >A >Q = Y < T\n<b>Conclusions:</b>\nI. N > Q\nII. Q < T\n",
+        "options": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ],
+        "correctAnswer": 2,
+        "explanation": ""
+      },
+      "hindi": {
+        "text": "<b>Directions:</b> In the following question assuming the given statements to be true, find which of the\nconclusion among given conclusions is/are definitely true and then give your answers accordingly.\n\na). Only conclusion I follows\nb). Only conclusion II follows\nc). Both I and II are follow\nd). Either conclusion I or II follows\ne). None of these\n\n<b>Directions:</b> In the following question assuming the given statements to be true, find which of the\nconclusion among given conclusions is/are definitely true and then give your answers accordingly.\n\na). Only conclusion I follows\nb). Only conclusion II follows\nc). Both I and II are follow\nd). Either conclusion I or II follows\ne). None of these\n\n",
+        "question": "<b>Statement: </b>\nH ≤ G ≤ N ≥ L >A >Q = Y < T\n<b>Conclusions:</b>\nI. N > Q\nII. Q < T\n",
+        "options": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ],
+        "correctAnswer": 2,
+        "explanation": ""
+      }
+    },
+    {
+      "english": {
+        "text": "<b>Directions:</b> In the following question assuming the given statements to be true, find which of the\nconclusion among given conclusions is/are definitely true and then give your answers accordingly.\n\na). Only conclusion I follows\nb). Only conclusion II follows\nc). Both I and II are follow\nd). Either conclusion I or II follows\ne). Neither Conclusion I nor II is True.\n\n\n",
+        "question": "<b>Statements:</b>\nF < H ≤ L; L < J ≤ S < Z\n<b>Conclusions:</b>\nI. S > F\nII. Z < H",
+        "options": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ],
+        "correctAnswer": 0,
+        "explanation": ""
+      },
+      "hindi": {
+        "text": "<b>Directions:</b> In the following question assuming the given statements to be true, find which of the\nconclusion among given conclusions is/are definitely true and then give your answers accordingly.\n\na). Only conclusion I follows\nb). Only conclusion II follows\nc). Both I and II are follow\nd). Either conclusion I or II follows\ne). Neither Conclusion I nor II is True.",
+        "question": "<b>Statements:</b>\nF < H ≤ L; L < J ≤ S < Z\n<b>Conclusions:</b>\nI. S > F\nII. Z < H",
+        "options": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ],
+        "correctAnswer": 0,
+        "explanation": ""
+      }
+    },
+    {
+      "english": {
+        "text": "<b>Directions:</b> In the following question assuming the given statements to be true, find which of the\nconclusion among given conclusions is/are definitely true and then give your answers accordingly.\n\na). Only conclusion I follows\nb). Only conclusion II follows\nc). Both I and II are follow\nd). Either conclusion I or II follows\ne). Neither Conclusion I nor II is True.",
+        "question": "<b>Statements:</b> \nR < O ≤ L ≤ E; G = E ≥ S ≥ P\n<b>Conclusions:</b> \nI. R < S\nII. O ≤ G\n",
+        "options": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ],
+        "correctAnswer": 1,
+        "explanation": ""
+      },
+      "hindi": {
+        "text": "<b>Directions:</b> In the following question assuming the given statements to be true, find which of the\nconclusion among given conclusions is/are definitely true and then give your answers accordingly.\n\na). Only conclusion I follows\nb). Only conclusion II follows\nc). Both I and II are follow\nd). Either conclusion I or II follows\ne). Neither Conclusion I nor II is True.",
+        "question": "<b>Statements:</b> \nR < O ≤ L ≤ E; G = E ≥ S ≥ P\n<b>Conclusions:</b> \nI. R < S\nII. O ≤ G\n",
+        "options": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ],
+        "correctAnswer": 1,
+        "explanation": ""
+      }
+    },
+    {
+      "english": {
+        "text": "<b>Directions:</b> In the following question assuming the given statements to be true, find which of the\nconclusion among given conclusions is/are definitely true and then give your answers accordingly.\n\na). Only conclusion I follows\nb). Only conclusion II follows\nc). Both I and II are follow\nd). Either conclusion I or II follows\ne). Neither Conclusion I nor II is True.",
+        "question": "<b>Statements:</b>\nP > Q = R ≥ S; T ≥ U ≤ V = S\n<b>Conclusions:</b>\nI. V = R\nII. V < R\n",
+        "options": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ],
+        "correctAnswer": 3,
+        "explanation": ""
+      },
+      "hindi": {
+        "text": "<b>Directions:</b> In the following question assuming the given statements to be true, find which of the\nconclusion among given conclusions is/are definitely true and then give your answers accordingly.\n\na). Only conclusion I follows\nb). Only conclusion II follows\nc). Both I and II are follow\nd). Either conclusion I or II follows\ne). Neither Conclusion I nor II is True.",
+        "question": "<b>Statements:</b>\nP > Q = R ≥ S; T ≥ U ≤ V = S\n<b>Conclusions:</b>\nI. V = R\nII. V < R\n",
+        "options": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ],
+        "correctAnswer": 3,
+        "explanation": ""
+      }
+    },
+    {
+      "english": {
+        "text": "<b>Directions:</b> In the following question assuming the given statements to be true, find which of the\nconclusion among given conclusions is/are definitely true and then give your answers accordingly.\n\na). Only conclusion I follows\nb). Only conclusion II follows\nc). Both I and II are follow\nd). Either conclusion I or II follows\ne). Neither Conclusion I nor II is True.",
+        "question": "<b>Statements:</b> \nW = B; B ≤ F; F < R\n<b>Conclusions:</b>\nI. W = F\nII. W < F\n",
+        "options": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ],
+        "correctAnswer": 3,
+        "explanation": ""
+      },
+      "hindi": {
+        "text": "<b>Directions:</b> In the following question assuming the given statements to be true, find which of the\nconclusion among given conclusions is/are definitely true and then give your answers accordingly.\n\na). Only conclusion I follows\nb). Only conclusion II follows\nc). Both I and II are follow\nd). Either conclusion I or II follows\ne). Neither Conclusion I nor II is True.",
+        "question": "<b>Statements:</b> \nW = B; B ≤ F; F < R\n<b>Conclusions:</b>\nI. W = F\nII. W < F\n",
+        "options": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ],
+        "correctAnswer": 3,
+        "explanation": ""
+      }
+    },
+    {
+      "english": {
+        "text": "<b>Directions:</b> In the following question assuming the given statements to be true, find which of the\nconclusion among given conclusions is/are definitely true and then give your answers accordingly.\n\na). Only conclusion I follows\nb). Only conclusion II follows\nc). Both I and II are follow\nd). Either conclusion I or II follows\ne). Neither Conclusion I nor II is True.",
+        "question": "<b>Statements: </b>\nF < P > B = E; Q < C = G > E\n<b>Conclusions:</b>\nI. P > E\nII. E > Q\n",
+        "options": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ],
+        "correctAnswer": 0,
+        "explanation": ""
+      },
+      "hindi": {
+        "text": "<b>Directions:</b> In the following question assuming the given statements to be true, find which of the\nconclusion among given conclusions is/are definitely true and then give your answers accordingly.\n\na). Only conclusion I follows\nb). Only conclusion II follows\nc). Both I and II are follow\nd). Either conclusion I or II follows\ne). Neither Conclusion I nor II is True.",
+        "question": "<b>Statements: </b>\nF < P > B = E; Q < C = G > E\n<b>Conclusions:</b>\nI. P > E\nII. E > Q",
+        "options": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ],
+        "correctAnswer": 0,
+        "explanation": ""
+      }
+    }
+  ]
+}
