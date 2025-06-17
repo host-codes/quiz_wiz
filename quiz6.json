@@ -1,0 +1,288 @@
+{
+  "title": "SBI IBPS pre Bank inequality set - 6",
+  "description": "SBI IBPS pre Bank inequality set - 6",
+  "duration": 600,
+  "multilingual": true,
+  "questions": [
+    {
+      "english": {
+        "text": "<b>Directions:</b> In the following question assuming the given statements to be true, find which of the\nconclusion among given conclusions is/are definitely true and then give your answers accordingly.\n\na). Only conclusion I follows\nb). Only conclusion II follows\nc). Both Conclusion I and II follows\nd). Either conclusion I or II follows\ne). Neither conclusion I or II follows",
+        "question": "<b>Statements:</b> \nU ≤ W ≥ R > S ; T > S = V\n<b>Conclusions:</b>\nI. W < V\nII. T < V\n",
+        "options": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ],
+        "correctAnswer": 4,
+        "explanation": ""
+      },
+      "hindi": {
+        "text": "<b>Directions:</b> In the following question assuming the given statements to be true, find which of the\nconclusion among given conclusions is/are definitely true and then give your answers accordingly.\n\na). Only conclusion I follows\nb). Only conclusion II follows\nc). Both Conclusion I and II follows\nd). Either conclusion I or II follows\ne). None of these",
+        "question": "<b>Statements:</b> \nU ≤ W ≥ R > S ; T > S = V\n<b>Conclusions:</b>\nI. W < V\nII. T < V\n",
+        "options": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ],
+        "correctAnswer": 4,
+        "explanation": ""
+      }
+    },
+    {
+      "english": {
+        "text": "<b>Directions:</b> In the following question assuming the given statements to be true, find which of the\nconclusion among given conclusions is/are definitely true and then give your answers accordingly.\n\na). Only conclusion I follows\nb). Only conclusion II follows\nc). Both Conclusion I and II follows\nd). Either conclusion I or II follows\ne). None of these",
+        "question": "<b>Statements:</b>\nZ ≥ Q = R ≥ N < U\n<b>Conclusions:</b>\nI) U > Q\nII) Z ≥ N\n",
+        "options": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ],
+        "correctAnswer": 1,
+        "explanation": ""
+      },
+      "hindi": {
+        "text": "<b>Directions:</b> In the following question assuming the given statements to be true, find which of the\nconclusion among given conclusions is/are definitely true and then give your answers accordingly.\n\na). Only conclusion I follows\nb). Only conclusion II follows\nc). Both Conclusion I and II follows\nd). Either conclusion I or II follows\ne). None of these",
+        "question": "<b>Statements:</b>\nZ ≥ Q = R ≥ N < U\n<b>Conclusions:</b>\nI) U > Q\nII) Z ≥ N\n",
+        "options": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ],
+        "correctAnswer": 1,
+        "explanation": ""
+      }
+    },
+    {
+      "english": {
+        "text": "<b>Directions:</b> In each of the following questions, the relationship between different elements is shown in the\nstatements followed by some conclusions. Find the conclusion which is definitely true.\n\na). Only conclusion I follows\nb). Only conclusion II follows\nc). Both Conclusions II and III are true\nd). Only Conclusions I and Either II or III are true\ne). None of these",
+        "question": "<b>Statements:</b>\nU > L > K < C < D > E; A < Z < M = K > H > I\n<b>Conclusions:</b>\nI). A < U\nII). M < E\nIII). E < K\n",
+        "options": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ],
+        "correctAnswer": 0,
+        "explanation": ""
+      },
+      "hindi": {
+        "text": "<b>Directions:</b> In each of the following questions, the relationship between different elements is shown in the\nstatements followed by some conclusions. Find the conclusion which is definitely true.\n\na). Only conclusion I follows\nb). Only conclusion II follows\nc). Both Conclusions II and III are true\nd). Only Conclusions I and Either II or III are true\ne). None of these",
+        "question": "<b>Statements:</b>\nU > L > K < C < D > E; A < Z < M = K > H > I\n<b>Conclusions:</b>\nI). A < U\nII). M < E\nIII). E < K\n",
+        "options": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ],
+        "correctAnswer": 0,
+        "explanation": ""
+      }
+    },
+    {
+      "english": {
+        "text": "<b>Directions:</b> In each of the following questions, the relationship between different elements is shown in the\nstatements followed by some conclusions. Find the conclusion which is definitely true.\n\na). Only conclusion I follows\nb). Only conclusion II follows\nc). Both Conclusions I and III are true\nd). Both Conclusions II and III are true\ne). None is true",
+        "question": "Statements:\nT > V = B < F > M > Q < R; O > W > X < F < A < D\nConclusions:\nI). X < V\nII). D > Q\nIII). A > V",
+        "options": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ],
+        "correctAnswer": 3,
+        "explanation": ""
+      },
+      "hindi": {
+        "text": "<b>Directions:</b> In each of the following questions, the relationship between different elements is shown in the\nstatements followed by some conclusions. Find the conclusion which is definitely true.\n\na). Only conclusion I follows\nb). Only conclusion II follows\nc). Both Conclusions I and III are true\nd). Both Conclusions II and III are true\ne). None is true",
+        "question": "Statements:\nT > V = B < F > M > Q < R; O > W > X < F < A < D\nConclusions:\nI). X < V\nII). D > Q\nIII). A > V",
+        "options": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ],
+        "correctAnswer": 3,
+        "explanation": ""
+      }
+    },
+    {
+      "english": {
+        "text": "<b>Directions:</b> In each of the following questions, the relationship between different elements is shown in the\nstatements followed by some conclusions. Find the conclusion which is definitely true.\n\na). Only conclusion I follows\nb). Only conclusion II follows\nc). Both Conclusions I and II are true\nd). Only Conclusion III is true\ne). None is true",
+        "question": "<b>Statements:</b>\nA < C < B < U > X > Y < Z; M > P > Q < U < T < D\n<b>Conclusions:</b>\nI). X < Q\nII). T > Z\nIII). D > B",
+        "options": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ],
+        "correctAnswer": 3,
+        "explanation": ""
+      },
+      "hindi": {
+        "text": "<b>Directions:</b> In each of the following questions, the relationship between different elements is shown in the\nstatements followed by some conclusions. Find the conclusion which is definitely true.\n\na). Only conclusion I follows\nb). Only conclusion II follows\nc). Both Conclusions I and II are true\nd). Only Conclusion III is true\ne). None is true",
+        "question": "<b>Statements:</b>\nA < C < B < U > X > Y < Z; M > P > Q < U < T < D\n<b>Conclusions:</b>\nI). X < Q\nII). T > Z\nIII). D > B",
+        "options": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ],
+        "correctAnswer": 3,
+        "explanation": ""
+      }
+    },
+    {
+      "english": {
+        "text": "<b>Directions:</b> In each of the following questions, the relationship between different elements is shown in the\nstatements followed by some conclusions. Find the conclusion which is definitely true.\n\na). All conclusions I, II and III are true\nb). Both Conclusions I and III are true\nc). Both Conclusions I and II are true\nd). Both Conclusions II and III are true\ne). None is true",
+        "question": "Statements:\nF > B > Z < X < A; P < Q < R < T = C; U > D < B < W < T\nConclusions:\nI). Z < C\nII). F > D\nIII). C > Z",
+        "options": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ],
+        "correctAnswer": 3,
+        "explanation": ""
+      },
+      "hindi": {
+        "text": "<b>Directions:</b> In each of the following questions, the relationship between different elements is shown in the\nstatements followed by some conclusions. Find the conclusion which is definitely true.\n\na). All conclusions I, II and III are true\nb). Both Conclusions I and III are true\nc). Both Conclusions I and II are true\nd). Both Conclusions II and III are true\ne). None is true",
+        "question": "Statements:\nF > B > Z < X < A; P < Q < R < T = C; U > D < B < W < T\nConclusions:\nI). Z < C\nII). F > D\nIII). C > Z",
+        "options": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ],
+        "correctAnswer": 3,
+        "explanation": ""
+      }
+    },
+    {
+      "english": {
+        "text": "<b>Directions:</b> In each of the following questions, the relationship between different elements is shown in the\nstatements followed by some conclusions. Find the conclusion which is definitely true.\n\na). Only Conclusion III is true\nb). All conclusions I, II and III are true\nc). Both Conclusions I and II are true\nd). Both Conclusions II and III are true\ne). Both Conclusions I and III are true",
+        "question": "<b>Statements:</b>\nX > D > H < L < M; K < W < B < A > M; V > E > B < D < G\n<b>Conclusions:</b>\nI). G > H\nII). W < X\nIII). K < V\n",
+        "options": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ],
+        "correctAnswer": 4,
+        "explanation": ""
+      },
+      "hindi": {
+        "text": "<b>Directions:</b> In each of the following questions, the relationship between different elements is shown in the\nstatements followed by some conclusions. Find the conclusion which is definitely true.\n\na). Only Conclusion III is true\nb). All conclusions I, II and III are true\nc). Both Conclusions I and II are true\nd). Both Conclusions II and III are true\ne). Both Conclusions I and III are true",
+        "question": "<b>Statements:</b>\nX > D > H < L < M; K < W < B < A > M; V > E > B < D < G\n<b>Conclusions:</b>\nI). G > H\nII). W < X\nIII). K < V\n",
+        "options": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ],
+        "correctAnswer": 4,
+        "explanation": ""
+      }
+    },
+    {
+      "english": {
+        "text": "<b>Directions:</b> In each of the following questions, the relationship between different elements is shown in the\nstatements followed by some conclusions. Find the conclusion which is definitely true.\n\na). Only conclusion I follows\nb). Only conclusion II follows\nc).  Both conclusions II and III are true\nd). Either conclusion I or II follows\ne). None of these",
+        "question": "<b>Statements:</b>\nK > U > X; P ≤ U = G; E > B ≥ G; F ≤ E < N\n<b>Conclusions:</b>\nI). N > U\nII). E ≤ K\nIII). F < P\n",
+        "options": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ],
+        "correctAnswer": 0,
+        "explanation": ""
+      },
+      "hindi": {
+        "text": "<b>Directions:</b> In each of the following questions, the relationship between different elements is shown in the\nstatements followed by some conclusions. Find the conclusion which is definitely true.\n\na). Only conclusion I follows\nb). Only conclusion II follows\nc).  Both conclusions II and III are true\nd). Either conclusion I or II follows\ne). None of these",
+        "question": "<b>Statements:</b>\nK > U > X; P ≤ U = G; E > B ≥ G; F ≤ E < N\n<b>Conclusions:</b>\nI). N > U\nII). E ≤ K\nIII). F < P\n",
+        "options": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ],
+        "correctAnswer": 0,
+        "explanation": ""
+      }
+    },
+    {
+      "english": {
+        "text": "<b>Directions:</b> In each of the following questions, the relationship between different elements is shown in the\nstatements followed by some conclusions. Find the conclusion which is definitely true.\n\na). Only conclusion I follows\nb). Only conclusion II follows\nc).  Both conclusions II and III are true\nd). Either conclusion I or II follows\ne). None of these",
+        "question": "<b>Statements:</b>\nR ≥ K = M; Y > R < S; E = F ≤ G; B > E > T\n<b>Conclusions:</b>\nI). K > F\nII). K = F\nIII). B > G\n",
+        "options": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ],
+        "correctAnswer": 4,
+        "explanation": ""
+      },
+      "hindi": {
+        "text": "<b>Directions:</b> In each of the following questions, the relationship between different elements is shown in the\nstatements followed by some conclusions. Find the conclusion which is definitely true.\n\na). Only conclusion I follows\nb). Only conclusion II follows\nc).  Both conclusions II and III are true\nd). Either conclusion I or II follows\ne). None of these",
+        "question": "<b>Statements:</b>\nR ≥ K = M; Y > R < S; E = F ≤ G; B > E > T\n<b>Conclusions:</b>\nI). K > F\nII). K = F\nIII). B > G\n",
+        "options": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ],
+        "correctAnswer": 4,
+        "explanation": ""
+      }
+    },
+    {
+      "english": {
+        "text": "<b>Directions:</b> In each of the following questions, the relationship between different elements is shown in the\nstatements followed by some conclusions. Find the conclusion which is definitely true.\n\na). Only conclusion I follows\nb). Only conclusion II follows\nc).  Both conclusions II and III are true\nd). Either conclusion I or II follows\ne). None of these",
+        "question": "Statements:\nF = M < G = E; N < P > K; R = J > P; E = U ≤ R\nConclusions:\nI). U < G\nII). F < R\nIII). J > K",
+        "options": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ],
+        "correctAnswer": 2,
+        "explanation": ""
+      },
+      "hindi": {
+        "text": "<b>Directions:</b> In each of the following questions, the relationship between different elements is shown in the\nstatements followed by some conclusions. Find the conclusion which is definitely true.\n\na). Only conclusion I follows\nb). Only conclusion II follows\nc).  Both conclusions II and III are true\nd). Either conclusion I or II follows\ne). None of these",
+        "question": "Statements:\nF = M < G = E; N < P > K; R = J > P; E = U ≤ R\nConclusions:\nI). U < G\nII). F < R\nIII). J > K",
+        "options": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ],
+        "correctAnswer": 2,
+        "explanation": ""
+      }
+    }
+  ]
+}
